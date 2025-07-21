@@ -2,7 +2,7 @@ import os
 import random
 import numpy as np
 import torch
-from src import config
+from . import config
 
 def setup_environment():
     """Set up directories and random seeds for reproducibility."""

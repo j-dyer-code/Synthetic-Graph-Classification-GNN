@@ -10,7 +10,7 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
 from IPython.display import display
-from src import config
+from . import config
 
 def get_important_features(features_list_of_dicts, labels):
     """

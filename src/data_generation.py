@@ -6,7 +6,7 @@ import igraph as ig
 import networkx as nx
 import numpy as np
 import pandas as pd
-from src import config
+from . import config
 
 def compute_lightweight_features_igraph(G):
     """

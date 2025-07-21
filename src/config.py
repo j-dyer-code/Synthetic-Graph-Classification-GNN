@@ -26,8 +26,10 @@ EARLY_STOPPING_PATIENCE = 10
 
 # --- Directories ---
 # Parent directories for outputs and data
-RESULTS_DIR = "../results"
-DATA_DIR = "../data"
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
 # Subdirectories for specific artifacts
 PLOT_DIR = os.path.join(RESULTS_DIR, "evaluation_plots")

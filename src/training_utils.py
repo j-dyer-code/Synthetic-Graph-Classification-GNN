@@ -1,7 +1,7 @@
 import os
 import torch
 
-from src import config
+from . import config
 
 def evaluate_one_epoch(model, loader, criterion, device):
     """

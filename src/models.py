@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import GATConv, GATv2Conv, GCNConv, SAGEConv, GINConv, TransformerConv, global_mean_pool
-from src import config
+from . import config
 
 class GraphFamilyClassifierBase(nn.Module):
     """
