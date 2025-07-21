@@ -31,13 +31,13 @@ Synthetic-Graph-Classification-GNN/
 Follow these steps to set up the environment and run the project.
 1. Clone the repository
 ```bash
-git clone[https://github.com/j-dyer-code/Synthetic-Graph-Classification-GNN.git](https://github.com/j-dyer-code/Synthetic-Graph-Classification-GNN.git)
+git clone https://github.com/j-dyer-code/Synthetic-Graph-Classification-GNN.git
 cd Synthetic-Graph-Classification-GNN
 ```
 2. Create a Virtual Environment (recommended)
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/Scripts/activate
 ```
 3. Install Dependencies
 ```bash
