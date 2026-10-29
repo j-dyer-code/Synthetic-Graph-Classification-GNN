@@ -1,8 +1,0 @@
-numpy==2.3.5
-scipy==1.17.0
-igraph==0.11.9
-texttable==1.7.0
-powerlaw==2.0.0
-matplotlib==3.10.8
-tqdm==4.67.1
-mpmath==1.3.0
