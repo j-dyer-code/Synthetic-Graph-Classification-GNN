@@ -1,0 +1,22 @@
+{
+  "protocol": "degree-distribution-v1",
+  "scope": "All 2000 exported graphs analysed independently; no pooling and no graph selection by fit quality",
+  "estimation": "Exact discrete power-law MLE; threshold minimizes igraph implementation discrete KS discrepancy (model P(K<k) versus empirical left CDF at observed degrees), igraph 0.11.9 / C core 0.10.16",
+  "bootstrap_trials": 1000,
+  "bootstrap": "Semiparametric empirical head and fitted discrete-zeta tail; refit both alpha and xmin in every replicate; strict D_boot > D_observed exceedance",
+  "seed": "First 8 bytes of SHA256('degree-distribution-v1:' + graph_id), big endian; independent seeded Python random.Random passed to igraph",
+  "threads_per_process": 1,
+  "minimum_tail_count_flag": 50,
+  "monte_carlo_confidence": 0.95,
+  "monte_carlo_interval": "Exact two-sided Clopper-Pearson binomial interval for bootstrap exceedance probability",
+  "goodness_of_fit_threshold": 0.1,
+  "alternatives": [
+    "exponential",
+    "lognormal"
+  ],
+  "alternative_support": "Same observations k >= fitted power-law xmin; no fitted or sample-maximum upper truncation",
+  "lognormal_definition": "Rounded discrete lognormal with probability over integer-width bins, using powerlaw 2.0.0 discrete_normalization='round'",
+  "comparison": "Official powerlaw non-nested likelihood-ratio statistic and nominal asymptotic p; same-tail per-observation likelihoods; stable direct Hurwitz-zeta normalization for power law",
+  "alternative_validity": "Flag library noise_flag, out-of-range/nonfinite parameters, nonpositive sigma or Lambda, floor-clipped/nonfinite/nonpositive probabilities, zero/nonfinite likelihood-difference variance, nonfinite comparison; retain failed outcomes without selecting another fit",
+  "comparison_threshold": 0.1
+}
